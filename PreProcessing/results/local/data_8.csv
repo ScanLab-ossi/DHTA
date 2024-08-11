@@ -1,0 +1,9 @@
+vector,word,Pos,wordCount,percent_of_total
+8,audio,ADJ,1,0.125
+8,device,NOUN,1,0.125
+8,document,NOUN,1,0.125
+8,file,NOUN,1,0.125
+8,paper,NOUN,1,0.125
+8,reading,NOUN,1,0.125
+8,transit,NOUN,1,0.125
+8,user,NOUN,1,0.125

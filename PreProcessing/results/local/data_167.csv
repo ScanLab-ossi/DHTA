@@ -1,0 +1,4 @@
+vector,word,Pos,wordCount,percent_of_total
+167,chair,NOUN,1,0.3333333333333333
+167,stabilization,NOUN,1,0.3333333333333333
+167,table,NOUN,1,0.3333333333333333

@@ -1,0 +1,9 @@
+vector,word,Pos,wordCount,percent_of_total
+7,amount,NOUN,1,0.1
+7,coffee,NOUN,2,0.2
+7,cup,NOUN,2,0.2
+7,outside,NOUN,1,0.1
+7,progress,NOUN,1,0.1
+7,screen,NOUN,1,0.1
+7,tangent,NOUN,1,0.1
+7,track,NOUN,1,0.1

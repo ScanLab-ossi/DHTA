@@ -1,0 +1,6 @@
+vector,word,Pos,wordCount,percent_of_total
+1,break,NOUN,1,0.2
+1,bus,NOUN,1,0.2
+1,meditation,NOUN,1,0.2
+1,study,NOUN,1,0.2
+1,wearable,NOUN,1,0.2

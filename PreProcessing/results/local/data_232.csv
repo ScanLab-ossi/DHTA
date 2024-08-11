@@ -1,0 +1,6 @@
+vector,word,Pos,wordCount,percent_of_total
+232,american,ADJ,1,0.2
+232,company,NOUN,1,0.2
+232,headquarter,ADJ,1,0.2
+232,multinational,ADJ,1,0.2
+232,technology,NOUN,1,0.2

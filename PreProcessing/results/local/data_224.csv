@@ -1,0 +1,4 @@
+vector,word,Pos,wordCount,percent_of_total
+224,stay,NOUN,1,0.3333333333333333
+224,sure,ADJ,1,0.3333333333333333
+224,user,NOUN,1,0.3333333333333333

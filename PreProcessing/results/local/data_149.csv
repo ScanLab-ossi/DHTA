@@ -1,0 +1,11 @@
+vector,word,Pos,wordCount,percent_of_total
+149,aware,ADJ,1,0.1
+149,danger,NOUN,1,0.1
+149,environment,NOUN,1,0.1
+149,glassesheadset,NOUN,1,0.1
+149,mobile,ADJ,1,0.1
+149,peripheral,NOUN,1,0.1
+149,signal,NOUN,1,0.1
+149,surrounding,NOUN,1,0.1
+149,user,NOUN,1,0.1
+149,work,NOUN,1,0.1

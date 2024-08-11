@@ -1,0 +1,5 @@
+vector,word,Pos,wordCount,percent_of_total
+171,haptic,NOUN,1,0.25
+171,nausea,NOUN,1,0.25
+171,reduction,NOUN,1,0.25
+171,wearable,ADJ,1,0.25

@@ -1,0 +1,4 @@
+vector,word,Pos,wordCount,percent_of_total
+164,device,NOUN,1,0.3333333333333333
+164,heartbeat,NOUN,1,0.3333333333333333
+164,scent,NOUN,1,0.3333333333333333

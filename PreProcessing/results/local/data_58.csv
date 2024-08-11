@@ -1,0 +1,6 @@
+vector,word,Pos,wordCount,percent_of_total
+58,alarm,NOUN,1,0.2
+58,bottle,NOUN,1,0.2
+58,hydrated,ADJ,1,0.2
+58,user,NOUN,1,0.2
+58,water,NOUN,1,0.2

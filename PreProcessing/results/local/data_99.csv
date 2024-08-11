@@ -1,0 +1,4 @@
+vector,word,Pos,wordCount,percent_of_total
+99,computer,NOUN,1,0.25
+99,portable,ADJ,1,0.25
+99,screen,NOUN,2,0.5

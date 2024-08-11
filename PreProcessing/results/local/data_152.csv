@@ -1,0 +1,6 @@
+vector,word,Pos,wordCount,percent_of_total
+152,change,NOUN,1,0.2
+152,indooroutdoor,NOUN,1,0.2
+152,jacketsweater,NOUN,1,0.2
+152,temperature,NOUN,1,0.2
+152,type,NOUN,1,0.2

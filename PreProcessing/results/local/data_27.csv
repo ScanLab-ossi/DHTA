@@ -1,0 +1,11 @@
+vector,word,Pos,wordCount,percent_of_total
+27,brainstorming,NOUN,1,0.1
+27,collaborative,ADJ,1,0.1
+27,facial,ADJ,1,0.1
+27,gesture,NOUN,1,0.1
+27,interactive,ADJ,1,0.1
+27,multitouch,ADJ,1,0.1
+27,recognition,NOUN,1,0.1
+27,session,NOUN,1,0.1
+27,wallmounted,ADJ,1,0.1
+27,whiteboard,NOUN,1,0.1

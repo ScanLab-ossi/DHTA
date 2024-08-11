@@ -1,0 +1,6 @@
+vector,word,Pos,wordCount,percent_of_total
+105,people,NOUN,1,0.2
+105,public,ADJ,1,0.2
+105,room,NOUN,1,0.2
+105,transportation,NOUN,1,0.2
+105,vehicle,NOUN,1,0.2

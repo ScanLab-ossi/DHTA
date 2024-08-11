@@ -1,0 +1,7 @@
+vector,word,Pos,wordCount,percent_of_total
+155,day,NOUN,1,0.125
+155,interface,NOUN,1,0.125
+155,locket,NOUN,1,0.125
+155,photo,NOUN,2,0.25
+155,user,NOUN,2,0.25
+155,wearable,ADJ,1,0.125

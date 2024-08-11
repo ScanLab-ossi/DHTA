@@ -1,0 +1,11 @@
+vector,word,Pos,wordCount,percent_of_total
+207,brightness,NOUN,1,0.1
+207,color,NOUN,1,0.1
+207,disruption,NOUN,1,0.1
+207,eyestrain,NOUN,1,0.1
+207,laptop,NOUN,1,0.1
+207,level,NOUN,1,0.1
+207,light,ADJ,1,0.1
+207,screen,NOUN,1,0.1
+207,setting,NOUN,1,0.1
+207,space,NOUN,1,0.1

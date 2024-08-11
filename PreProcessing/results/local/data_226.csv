@@ -1,0 +1,9 @@
+vector,word,Pos,wordCount,percent_of_total
+226,app,NOUN,1,0.125
+226,device,NOUN,1,0.125
+226,mobile,ADJ,1,0.125
+226,notification,NOUN,1,0.125
+226,software,NOUN,1,0.125
+226,solution,NOUN,1,0.125
+226,unnecessary,ADJ,1,0.125
+226,user,NOUN,1,0.125

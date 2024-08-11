@@ -1,0 +1,3 @@
+vector,word,Pos,wordCount,percent_of_total
+208,loss,NOUN,1,0.5
+208,sensor,NOUN,1,0.5
