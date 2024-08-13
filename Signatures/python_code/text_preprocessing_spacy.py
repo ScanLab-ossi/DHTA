@@ -151,8 +151,8 @@ for index, row in df.iterrows():
     
 # Convert the result to a DataFrame and save it to a CSV
 df = pd.DataFrame(result_spacy_csv) #( result_stem_csv)
-df.to_csv('/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results/result_spacy_csv.csv', index=False)
-
+df.to_csv(current_path+'/Signatures/results/result_spacy_csv.csv', index=False)
+df['doc']=df['vector']
  
 
  
@@ -161,31 +161,25 @@ df.to_csv('/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results/result_
 result = df.groupby('word').agg({
     'pos': 'max',           # max of 'Value' column
     'doc_id':'max',
+    'doc':'max',
     'dt':'max',
     'word': 'count',
     'subcorpus':'max'        # count of 'OtherColumn'
-}).rename(columns={'pos': 'Maxpos', 'word': 'wordCount'})
+}).rename(columns={'pos': 'Maxpos', 'word': 'wordCount', 'doc':'doc'})
 
 
 dfglobal=result
 
-print  ( dfglobal['wordCount'] ) 
-print  ( dfglobal['wordCount'].sum())
-print  ( dfglobal['wordCount'].count())
-print  ( dfglobal['wordCount'].max())
-print  ( dfglobal['wordCount'].min())
-
  
-
-
 # Generate vectors per author 
 dflocal = df.groupby(['vector', 'word']).agg({
     'pos': 'max',           # max of 'Value' column
     'word': 'count',         # count of 'OtherColumn' 
     'dt':'max', 
     'doc_id':'max',
+    'doc':'max',
     'subcorpus':'max'        # count of 'OtherColumn'
-}).rename(columns={'pos': 'Pos', 'word': 'wordCount','vector': 'vector', }) 
+}).rename(columns={'pos': 'Pos', 'word': 'wordCount','doc': 'doc','doc_id':'doc_id'  }) 
 
 #print(dflocal) 
 #dflocal.to_csv('agg_local.csv', index=True)
@@ -204,7 +198,7 @@ dflocal['percent_of_total'] = (dflocal['wordCount'] / total_sum_by_category)
 #dflocal = dflocal.sort_values(['vector', 'percent_of_total'], ascending=[True])
 
 
-all_local_freq_file_name= '/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results/all_local_freq.csv'
+all_local_freq_file_name= current_path+'/Signatures/results/all_local_freq.csv'
 dflocal.to_csv(all_local_freq_file_name, index=True)
 
 # Split to multiple files   
@@ -213,7 +207,7 @@ grouped = dflocal.groupby(level=0)
 # Iterate over each group
 for vector_value, group_df in grouped:
     # Define the CSV file name based on the vector value
-    file_name = '/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results/'+f'data_{vector_value}.csv'
+    file_name = current_path+'/Signatures/results/'+f'data_{vector_value}.csv'
     
     # Save the group DataFrame to a CSV file
     group_df.to_csv(file_name)
@@ -228,10 +222,10 @@ dfglobal = dflocal.groupby(['word']).agg({
 }).rename(columns={'Pos': 'Pos', 'percent_of_total': 'wordavg' , 'wordCount':'wordCount' ,  }) 
 #print (dfglobal) 
 
-all_global_freq_file_name='/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results/all_global_freq.csv'
+all_global_freq_file_name=current_path+'/Signatures/results/all_global_freq.csv'
 dfglobal.to_csv(all_global_freq_file_name, index=True)
  
 # Merge dflocal and dfglobal to the same CSV file  
 merged_df = pd.merge(dflocal,dfglobal, on='word',   how='left')
 #print(merged_df) 
-merged_df.to_csv('/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results/agg_merged.csv', index=True) 
+merged_df.to_csv(current_path+'/Signatures/results/agg_merged.csv', index=True) 
