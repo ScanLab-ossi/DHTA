@@ -1,6 +1,6 @@
-vector,word,Pos,wordCount,percent_of_total
-4,different,ADJ,1,0.2
-4,friend,NOUN,1,0.2
-4,people,NOUN,1,0.2
-4,personality,NOUN,1,0.2
-4,vibe,NOUN,1,0.2
+vector,word,Pos,wordCount,doc,percent_of_total
+4,different,ADJ,1,4,0.2
+4,friend,NOUN,1,4,0.2
+4,people,NOUN,1,4,0.2
+4,personality,NOUN,1,4,0.2
+4,vibe,NOUN,1,4,0.2

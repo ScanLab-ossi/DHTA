@@ -1,8 +1,8 @@
-vector,word,Pos,wordCount,percent_of_total
-159,alert,NOUN,1,0.125
-159,nonverbal,ADJ,2,0.25
-159,notification,NOUN,1,0.125
-159,people,NOUN,1,0.125
-159,user,NOUN,1,0.125
-159,visible,ADJ,1,0.125
-159,wearable,ADJ,1,0.125
+vector,word,Pos,wordCount,doc,percent_of_total
+159,alert,NOUN,1,159,0.125
+159,nonverbal,ADJ,2,159,0.25
+159,notification,NOUN,1,159,0.125
+159,people,NOUN,1,159,0.125
+159,user,NOUN,1,159,0.125
+159,visible,ADJ,1,159,0.125
+159,wearable,ADJ,1,159,0.125

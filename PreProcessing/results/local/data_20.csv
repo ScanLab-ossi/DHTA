@@ -1,6 +1,6 @@
-vector,word,Pos,wordCount,percent_of_total
-20,move,NOUN,1,0.2
-20,people,NOUN,1,0.2
-20,portable,ADJ,1,0.2
-20,printer,NOUN,1,0.2
-20,screen,NOUN,1,0.2
+vector,word,Pos,wordCount,doc,percent_of_total
+20,move,NOUN,1,20,0.2
+20,people,NOUN,1,20,0.2
+20,portable,ADJ,1,20,0.2
+20,printer,NOUN,1,20,0.2
+20,screen,NOUN,1,20,0.2

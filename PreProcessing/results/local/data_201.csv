@@ -1,7 +1,7 @@
-vector,word,Pos,wordCount,percent_of_total
-201,bag,NOUN,1,0.125
-201,block,NOUN,1,0.125
-201,leisure,NOUN,1,0.125
-201,space,NOUN,2,0.25
-201,website,NOUN,2,0.25
-201,work,NOUN,1,0.125
+vector,word,Pos,wordCount,doc,percent_of_total
+201,bag,NOUN,1,201,0.125
+201,block,NOUN,1,201,0.125
+201,leisure,NOUN,1,201,0.125
+201,space,NOUN,2,201,0.25
+201,website,NOUN,2,201,0.25
+201,work,NOUN,1,201,0.125

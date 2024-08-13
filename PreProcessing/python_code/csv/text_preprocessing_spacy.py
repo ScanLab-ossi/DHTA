@@ -157,6 +157,7 @@ for index, row in df.iterrows():
 # Convert the result to a DataFrame and save it to a CSV
 df = pd.DataFrame(result_spacy_csv) #( result_stem_csv)
 df.to_csv('result_spacy_csv.csv', index=False)
+df['doc']=df['vector']
 
  
 
@@ -179,13 +180,12 @@ print  ( dfglobal['wordCount'].min())
 
  
 
-
 # Generate vectors per author 
 dflocal = df.groupby(['vector', 'word']).agg({
     'pos': 'max',           # max of 'Value' column
-    'word': 'count'         # count of 'OtherColumn'
-}).rename(columns={'pos': 'Pos', 'word': 'wordCount','vector': 'vector', }) 
-
+    'word': 'count' ,         # count of 'OtherColumn' 
+    'doc':'max'
+}).rename(columns={'pos': 'Pos', 'word': 'wordCount','vector': 'vector','doc':'doc' })  
 #print(dflocal) 
 #dflocal.to_csv('agg_local.csv', index=True)
 
@@ -203,7 +203,7 @@ dflocal['percent_of_total'] = (dflocal['wordCount'] / total_sum_by_category)
 #dflocal = dflocal.sort_values(['vector', 'percent_of_total'], ascending=[True])
 
 
-all_local_freq_file_name=current_path+'/PreProcessing/results/local/all_local_freq.csv'
+all_local_freq_file_name=current_path+'/PreProcessing/results/local/all_local_freq.csv' 
 dflocal.to_csv(all_local_freq_file_name, index=True)
 
 # Split to multiple files   
@@ -230,7 +230,10 @@ dfglobal = dflocal.groupby(['word']).agg({
 all_global_freq_file_name=current_path+'/PreProcessing/results/global/all_global_freq.csv'
 dfglobal.to_csv(all_global_freq_file_name, index=True)
  
+#print(dflocal.head(5)) 
+ 
 # Merge dflocal and dfglobal to the same CSV file  
-merged_df = pd.merge(dflocal,dfglobal, on='word',   how='left')
+merged_df = pd.merge(dflocal,dfglobal,  on='word',   how='left')
 #print(merged_df) 
-merged_df.to_csv(current_path+'/PreProcessing/results/agg_merged.csv', index=True) 
+merged_df.to_csv(current_path+'/PreProcessing/results/merged/agg_merged.csv', index=False) 
+ 

@@ -1,6 +1,6 @@
-vector,word,Pos,wordCount,percent_of_total
-210,desk,NOUN,1,0.2
-210,measure,NOUN,1,0.2
-210,physical,ADJ,1,0.2
-210,time,NOUN,1,0.2
-210,track,NOUN,1,0.2
+vector,word,Pos,wordCount,doc,percent_of_total
+210,desk,NOUN,1,210,0.2
+210,measure,NOUN,1,210,0.2
+210,physical,ADJ,1,210,0.2
+210,time,NOUN,1,210,0.2
+210,track,NOUN,1,210,0.2

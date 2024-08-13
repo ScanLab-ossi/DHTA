@@ -1,2 +1,2 @@
-vector,word,Pos,wordCount,percent_of_total
-81,name,NOUN,1,1.0
+vector,word,Pos,wordCount,doc,percent_of_total
+81,name,NOUN,1,81,1.0

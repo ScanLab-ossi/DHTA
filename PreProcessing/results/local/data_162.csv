@@ -1,6 +1,6 @@
-vector,word,Pos,wordCount,percent_of_total
-162,jacketvest,NOUN,1,0.2
-162,massage,NOUN,1,0.2
-162,sensation,NOUN,1,0.2
-162,vibrate,NOUN,1,0.2
-162,wearable,ADJ,1,0.2
+vector,word,Pos,wordCount,doc,percent_of_total
+162,jacketvest,NOUN,1,162,0.2
+162,massage,NOUN,1,162,0.2
+162,sensation,NOUN,1,162,0.2
+162,vibrate,NOUN,1,162,0.2
+162,wearable,ADJ,1,162,0.2

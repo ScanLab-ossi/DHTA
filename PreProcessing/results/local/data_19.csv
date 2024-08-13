@@ -1,6 +1,6 @@
-vector,word,Pos,wordCount,percent_of_total
-19,exam,NOUN,1,0.2
-19,measure,NOUN,1,0.2
-19,online,ADJ,1,0.2
-19,pulse,NOUN,1,0.2
-19,tui,NOUN,1,0.2
+vector,word,Pos,wordCount,doc,percent_of_total
+19,exam,NOUN,1,19,0.2
+19,measure,NOUN,1,19,0.2
+19,online,ADJ,1,19,0.2
+19,pulse,NOUN,1,19,0.2
+19,tui,NOUN,1,19,0.2

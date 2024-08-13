@@ -1,6 +1,6 @@
-vector,word,Pos,wordCount,percent_of_total
-100,bumpy,ADJ,1,0.2
-100,desk,NOUN,1,0.2
-100,portable,ADJ,1,0.2
-100,ride,NOUN,1,0.2
-100,stable,ADJ,1,0.2
+vector,word,Pos,wordCount,doc,percent_of_total
+100,bumpy,ADJ,1,100,0.2
+100,desk,NOUN,1,100,0.2
+100,portable,ADJ,1,100,0.2
+100,ride,NOUN,1,100,0.2
+100,stable,ADJ,1,100,0.2
