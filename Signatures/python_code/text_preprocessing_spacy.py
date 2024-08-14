@@ -7,6 +7,8 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet 
 from nltk.stem import PorterStemmer, LancasterStemmer
 import os
+#import Signatures._LPA
+#import Signatures._TLPA
 
 
 
@@ -188,6 +190,7 @@ dflocal = df.groupby(['vector', 'word']).agg({
 
 # Calculate the total sum
 total_sum = dfglobal['wordCount'].sum()
+print(total_sum)
  # Calculate the percentage of the total for each value (local)
  
 total_sum_by_category = dflocal.groupby('vector')['wordCount'].transform('sum')
@@ -213,14 +216,17 @@ for vector_value, group_df in grouped:
     group_df.to_csv(file_name)
     
     #print(f"DataFrame for vector {vector_value} saved to {file_name}")
-
+print(vector_value)
+ 
 # Calculate global Frequencies (avg of avg) 
 dfglobal = dflocal.groupby(['word']).agg({
     'Pos': 'max',           # max of 'Value' column
     'percent_of_total': 'mean' ,         # count of 'OtherColumn'
     'wordCount':'sum', 
-}).rename(columns={'Pos': 'Pos', 'percent_of_total': 'wordavg' , 'wordCount':'wordCount' ,  }) 
-#print (dfglobal) 
+}).rename(columns={'Pos': 'Pos', 'percent_of_total': 'avg_freq' , 'wordCount':'wordCount'    }) 
+
+dfglobal['prevalence']=dfglobal['wordCount']/vector_value 
+dfglobal['wordavg']=dfglobal['wordCount']/total_sum 
 
 all_global_freq_file_name=current_path+'/Signatures/results/all_global_freq.csv'
 dfglobal.to_csv(all_global_freq_file_name, index=True)

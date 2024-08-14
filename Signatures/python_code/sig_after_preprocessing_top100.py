@@ -11,7 +11,9 @@ all_df=pd.read_csv(current_path + '/Signatures/results/all_global_freq.csv')
 
 # Cut top 100 only 
 
-all_df=all_df.nlargest(100, 'wordCount') 
+#all_df=all_df.nlargest(1000, 'wordCount') 
+all_df.to_csv(current_path + '/Signatures/results/topoutput.csv', index=False)
+
 merged_df = all_df[['word', 'wordavg' , 'wordCount']] 
 # Step 2: List all CSV files in the directory
 file_list = glob.glob(current_path + '/Signatures/results/data_*.csv')
@@ -30,7 +32,7 @@ for i, file in enumerate(file_list):
     merged_df['filename']=i
 
     # Merge with the accumulated DataFrame using an outer join
-    merged_df = pd.merge(merged_df, temp_df, on='word', how='outer')
+    merged_df = pd.merge(merged_df, temp_df, on='word', how='left')
     concat_df = pd.concat([concat_df, merged_df], axis=0, ignore_index=True) 
 
 
@@ -77,6 +79,7 @@ for filename  in unique_files:
     top_30_df = filtered_df.nlargest(30, 'JSD')
     selected_columns_df=top_30_df[['filename','word','wordavg','percent_of_total','JSD']]
     # Display the selected rows
+    print(top_30_df.head(30))
     sig_df = pd.concat([sig_df, top_30_df], axis=0, ignore_index=True)  
 
  

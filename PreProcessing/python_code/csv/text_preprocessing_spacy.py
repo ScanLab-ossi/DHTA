@@ -219,13 +219,19 @@ for vector_value, group_df in grouped:
     
     #print(f"DataFrame for vector {vector_value} saved to {file_name}")
 
+
 # Calculate global Frequencies (avg of avg) 
 dfglobal = dflocal.groupby(['word']).agg({
     'Pos': 'max',           # max of 'Value' column
     'percent_of_total': 'mean' ,         # count of 'OtherColumn'
     'wordCount':'sum', 
-}).rename(columns={'Pos': 'Pos', 'percent_of_total': 'wordavg' , 'wordCount':'wordCount' ,  }) 
-#print (dfglobal) 
+}).rename(columns={'Pos': 'Pos', 'percent_of_total': 'avg_freq' , 'wordCount':'wordCount'    }) 
+
+dfglobal['prevalence']=dfglobal['wordCount']/vector_value 
+dfglobal['wordavg']=dfglobal['wordCount']/total_sum 
+
+all_global_freq_file_name=current_path+'/Signatures/results/all_global_freq.csv'
+dfglobal.to_csv(all_global_freq_file_name, index=True)
 
 all_global_freq_file_name=current_path+'/PreProcessing/results/global/all_global_freq.csv'
 dfglobal.to_csv(all_global_freq_file_name, index=True)
