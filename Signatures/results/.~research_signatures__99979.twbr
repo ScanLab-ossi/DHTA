@@ -30,6 +30,9 @@
           <named-connection caption='final_signatures_30' name='textscan.0hj0yyz1xzxt0x12f1q9q0q2utje'>
             <connection class='textscan' directory='/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results' filename='final_signatures_30.csv' password='' server='' />
           </named-connection>
+          <named-connection caption='jensenshannon' name='textscan.0corxp808o02ez12pemt909izdib'>
+            <connection class='textscan' directory='/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results_cod' filename='jensenshannon.csv' password='' server='' />
+          </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0hj0yyz1xzxt0x12f1q9q0q2utje' name='agg_merged.csv' table='[agg_merged#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en' separator=','>
@@ -1015,6 +1018,623 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
+    <datasource caption='signatures_30_period' inline='true' name='federated.057bd4p04vlcyh1exkwnn1uuhyc1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='signatures_30_period' name='textscan.0dzbcrj00rhb971a2fthl0ucyi0i'>
+            <connection class='textscan' directory='/Users/hagitbenshoshan/Documents/DHTA/DHTA/Signatures/results' filename='signatures_30_period.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0dzbcrj00rhb971a2fthl0ucyi0i' name='signatures_30_period.csv' table='[signatures_30_period#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='filename' ordinal='1' />
+            <column datatype='string' name='word' ordinal='2' />
+            <column datatype='real' name='wordavg' ordinal='3' />
+            <column datatype='real' name='percent_of_total' ordinal='4' />
+            <column datatype='real' name='JSD' ordinal='5' />
+            <column datatype='string' name='final_JSD' ordinal='6' />
+            <column datatype='date' name='dt' ordinal='7' />
+            <column datatype='date' name='period' ordinal='8' />
+            <column datatype='real' name='vector' ordinal='9' />
+            <column datatype='string' name='Pos' ordinal='10' />
+            <column datatype='string' name='wordCount' ordinal='11' />
+            <column datatype='string' name='doc_id' ordinal='12' />
+            <column datatype='real' name='doc' ordinal='13' />
+            <column datatype='string' name='subcorpus' ordinal='14' />
+            <column datatype='real' name='wordCount_x' ordinal='15' />
+            <column datatype='real' name='wordCount_y' ordinal='16' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0dzbcrj00rhb971a2fthl0ucyi0i' name='signatures_30_period.csv' table='[signatures_30_period#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='filename' ordinal='1' />
+            <column datatype='string' name='word' ordinal='2' />
+            <column datatype='real' name='wordavg' ordinal='3' />
+            <column datatype='real' name='percent_of_total' ordinal='4' />
+            <column datatype='real' name='JSD' ordinal='5' />
+            <column datatype='string' name='final_JSD' ordinal='6' />
+            <column datatype='date' name='dt' ordinal='7' />
+            <column datatype='date' name='period' ordinal='8' />
+            <column datatype='real' name='vector' ordinal='9' />
+            <column datatype='string' name='Pos' ordinal='10' />
+            <column datatype='string' name='wordCount' ordinal='11' />
+            <column datatype='string' name='doc_id' ordinal='12' />
+            <column datatype='real' name='doc' ordinal='13' />
+            <column datatype='string' name='subcorpus' ordinal='14' />
+            <column datatype='real' name='wordCount_x' ordinal='15' />
+            <column datatype='real' name='wordCount_y' ordinal='16' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>filename</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[filename]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>filename</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>word</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[word]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>word</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wordavg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wordavg]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>wordavg</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>percent_of_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[percent_of_total]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>percent_of_total</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>JSD</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[JSD]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>JSD</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>final_JSD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[final_JSD]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>final_JSD</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dt</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[dt]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>dt</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>period</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[period]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>period</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vector</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[vector]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>vector</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pos</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pos]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>Pos</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wordCount</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[wordCount]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>wordCount</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doc_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[doc_id]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>doc_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[doc]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>doc</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subcorpus</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[subcorpus]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>subcorpus</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wordCount_x</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wordCount_x]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>wordCount_x</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wordCount_y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wordCount_y]</local-name>
+            <parent-name>[signatures_30_period.csv]</parent-name>
+            <remote-alias>wordCount_y</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='signatures_30_period.csv' datatype='table' name='[__tableau_internal_object_id__].[signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A]' role='measure' type='quantitative' />
+      <column caption='Doc' datatype='real' name='[doc]' role='measure' type='quantitative' />
+      <column caption='Doc Id' datatype='string' name='[doc_id]' role='dimension' type='nominal' />
+      <column caption='Dt' datatype='date' name='[dt]' role='dimension' type='ordinal' />
+      <column caption='Filename' datatype='integer' name='[filename]' role='measure' type='quantitative' />
+      <column caption='final JSD' datatype='string' name='[final_JSD]' role='dimension' type='nominal' />
+      <column caption='Percent Of Total' datatype='real' name='[percent_of_total]' role='measure' type='quantitative' />
+      <column caption='Period' datatype='date' name='[period]' role='dimension' type='ordinal' />
+      <column caption='Subcorpus' datatype='string' name='[subcorpus]' role='dimension' type='nominal' />
+      <column caption='Vector' datatype='real' name='[vector]' role='measure' type='quantitative' />
+      <column caption='Word Count' datatype='string' name='[wordCount]' role='dimension' type='nominal' />
+      <column caption='wordCount x' datatype='real' name='[wordCount_x]' role='measure' type='quantitative' />
+      <column caption='wordCount y' datatype='real' name='[wordCount_y]' role='measure' type='quantitative' />
+      <column caption='Word' datatype='string' name='[word]' role='dimension' type='nominal' />
+      <column caption='Wordavg' datatype='real' name='[wordavg]' role='measure' type='quantitative' />
+      <column-instance column='[filename]' derivation='Min' name='[min:filename:ok]' pivot='key' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[min:filename:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>52</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>77</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>98</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>43</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>65</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>89</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>47</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>70</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>93</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>33</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>56</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>81</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>63</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>78</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>26</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>48</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>72</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>95</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>41</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>87</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>44</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>66</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>90</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>39</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>60</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>85</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>49</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>73</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>96</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>34</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>64</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>82</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>35</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>58</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>83</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>62</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>86</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>40</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>42</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>88</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>53</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>54</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>79</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>51</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>76</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>97</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>45</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>67</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>91</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>37</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>59</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>84</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>32</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>55</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>57</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>80</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>24</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>46</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>69</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>92</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='signatures_30_period.csv' id='signatures_30_period.csv_97647A3EE5DC4D27A193FB3A8D3A7C0A'>
+            <properties context=''>
+              <relation connection='textscan.0dzbcrj00rhb971a2fthl0ucyi0i' name='signatures_30_period.csv' table='[signatures_30_period#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='integer' name='filename' ordinal='1' />
+                  <column datatype='string' name='word' ordinal='2' />
+                  <column datatype='real' name='wordavg' ordinal='3' />
+                  <column datatype='real' name='percent_of_total' ordinal='4' />
+                  <column datatype='real' name='JSD' ordinal='5' />
+                  <column datatype='string' name='final_JSD' ordinal='6' />
+                  <column datatype='date' name='dt' ordinal='7' />
+                  <column datatype='date' name='period' ordinal='8' />
+                  <column datatype='real' name='vector' ordinal='9' />
+                  <column datatype='string' name='Pos' ordinal='10' />
+                  <column datatype='string' name='wordCount' ordinal='11' />
+                  <column datatype='string' name='doc_id' ordinal='12' />
+                  <column datatype='real' name='doc' ordinal='13' />
+                  <column datatype='string' name='subcorpus' ordinal='14' />
+                  <column datatype='real' name='wordCount_x' ordinal='15' />
+                  <column datatype='real' name='wordCount_y' ordinal='16' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
   </datasources>
   <worksheets>
     <worksheet name='Sheet 1'>
@@ -1109,10 +1729,10 @@
             <column caption='Avg Freq' datatype='real' name='[avg_freq]' role='measure' type='quantitative' />
             <column aggregation='Sum' caption='Filename' datatype='integer' name='[filename]' role='dimension' type='ordinal' />
             <column-instance column='[filename]' derivation='None' name='[none:filename:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[percent_of_total]' derivation='None' name='[none:percent_of_total:ok]' pivot='key' type='ordinal' />
             <column-instance column='[word]' derivation='None' name='[none:word:nk]' pivot='key' type='nominal' />
-            <column aggregation='Sum' caption='Percent Of Total' datatype='real' name='[percent_of_total]' role='dimension' type='ordinal' />
+            <column-instance column='[wordavg]' derivation='None' name='[none:wordavg:qk]' pivot='key' type='quantitative' />
             <column caption='Word' datatype='string' name='[word]' role='dimension' type='nominal' />
+            <column caption='Wordavg' datatype='real' name='[wordavg]' role='measure' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.0j1b37z0hu3ig816j3bd60oye1ws].[none:filename:ok]'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
@@ -1175,7 +1795,7 @@
             </view>
             <mark class='Bar' />
             <encodings>
-              <color column='[federated.0j1b37z0hu3ig816j3bd60oye1ws].[none:percent_of_total:ok]' />
+              <color column='[federated.0j1b37z0hu3ig816j3bd60oye1ws].[none:wordavg:qk]' />
               <lod column='[federated.0j1b37z0hu3ig816j3bd60oye1ws].[avg:JSD:qk]' />
             </encodings>
             <style>
@@ -1442,9 +2062,13 @@
             <column caption='Dt' datatype='date' name='[dt]' role='dimension' type='ordinal' />
             <column-instance column='[doc_id]' derivation='None' name='[none:doc_id:nk]' pivot='key' type='nominal' />
             <column-instance column='[word]' derivation='None' name='[none:word:nk]' pivot='key' type='nominal' />
+            <column caption='Percent Of Total' datatype='real' name='[percent_of_total]' role='measure' type='quantitative' />
             <column-instance column='[JSD]' derivation='Sum' name='[sum:JSD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[percent_of_total]' derivation='Sum' name='[sum:percent_of_total:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[wordCount_x]' derivation='Sum' name='[sum:wordCount_x:qk]' pivot='key' type='quantitative' />
             <column-instance column='[wordCount_y]' derivation='Sum' name='[sum:wordCount_y:qk]' pivot='key' type='quantitative' />
             <column-instance column='[dt]' derivation='Year-Trunc' name='[tyr:dt:qk]' pivot='key' type='quantitative' />
+            <column caption='wordCount x' datatype='real' name='[wordCount_x]' role='measure' type='quantitative' />
             <column caption='wordCount y' datatype='real' name='[wordCount_y]' role='measure' type='quantitative' />
             <column caption='Word' datatype='string' name='[word]' role='dimension' type='nominal' />
           </datasource-dependencies>
@@ -1462,19 +2086,66 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:JSD:qk]' />
-              <lod column='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:wordCount_y:qk]' />
+              <text column='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:JSD:qk]' />
+              <text column='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:percent_of_total:qk]' />
+              <text column='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:wordCount_x:qk]' />
+              <text column='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:wordCount_y:qk]' />
             </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows>([federated.1oupkrp1ahv1px1h6ekyz06lpvce].[none:doc_id:nk] * [federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:JSD:qk])</rows>
+        <rows>[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[none:doc_id:nk]</rows>
         <cols>[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[none:word:nk]</cols>
       </table>
       <simple-id uuid='{65E43F74-3443-4245-A196-C5C1B5B2D60D}' />
     </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='signatures_30_period' name='federated.057bd4p04vlcyh1exkwnn1uuhyc1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.057bd4p04vlcyh1exkwnn1uuhyc1'>
+            <column datatype='real' name='[JSD]' role='measure' type='quantitative' />
+            <column-instance column='[JSD]' derivation='Avg' name='[avg:JSD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[word]' derivation='None' name='[none:word:nk]' pivot='key' type='nominal' />
+            <column caption='Period' datatype='date' name='[period]' role='dimension' type='ordinal' />
+            <column-instance column='[period]' derivation='Month-Trunc' name='[tmn:period:ok]' pivot='key' type='ordinal' />
+            <column caption='Word' datatype='string' name='[word]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.057bd4p04vlcyh1exkwnn1uuhyc1].[avg:JSD:qk]' />
+              <text column='[federated.057bd4p04vlcyh1exkwnn1uuhyc1].[avg:JSD:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.057bd4p04vlcyh1exkwnn1uuhyc1].[none:word:nk]</rows>
+        <cols>[federated.057bd4p04vlcyh1exkwnn1uuhyc1].[tmn:period:ok]</cols>
+      </table>
+      <simple-id uuid='{2988D661-A893-4370-9284-3E92BC0B3F7B}' />
+    </worksheet>
   </worksheets>
-  <windows source-height='51'>
-    <window class='worksheet' name='Sheet 1'>
+  <windows source-height='72'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1520,7 +2191,7 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='1' param='[federated.0j1b37z0hu3ig816j3bd60oye1ws].[none:percent_of_total:ok]' type='color' />
+            <card pane-specification-id='1' param='[federated.0j1b37z0hu3ig816j3bd60oye1ws].[none:wordavg:qk]' type='color' />
           </strip>
         </edge>
       </cards>
@@ -1618,7 +2289,30 @@
       </cards>
       <simple-id uuid='{A5FA6E04-8249-4BB2-8668-CA6343FBC82F}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 7'>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FDA05559-7CA6-4006-B7D7-D65894A1983F}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1640,11 +2334,11 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='0' param='[federated.1oupkrp1ahv1px1h6ekyz06lpvce].[sum:JSD:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.057bd4p04vlcyh1exkwnn1uuhyc1].[avg:JSD:qk]' type='color' />
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{FDA05559-7CA6-4006-B7D7-D65894A1983F}' />
+      <simple-id uuid='{9C6B9A31-1671-4C71-83A1-1A7A63139F59}' />
     </window>
   </windows>
 </workbook>

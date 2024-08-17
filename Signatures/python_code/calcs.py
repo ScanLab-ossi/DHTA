@@ -1,6 +1,6 @@
 import numpy as np
 import numpy.ma as ma 
-from   scipy.spatial.distance import jensenshannon
+from scipy.spatial.distance import jensenshannon
 from scipy.special import kl_div 
 from scipy.stats import entropy
 import math
@@ -101,6 +101,38 @@ def calculate_jsd_sig(p, q):
         # Display the resulting list
     print(result_list)
     return(result_list) 
+
+def calculate_jsd_sig_distance(p, q):
+    """
+    Calculate the Jensen-Shannon distance between two probability distributions.
+
+    Parameters:
+    p (numpy array): First probability distribution.
+    q (numpy array): Second probability distribution.
+
+    Returns:
+    float: Jensen-Shannon distance.
+    """
+    print(p,q)
+
+    plist = p 
+    qlist = q  
+
+    # Convert to 2-element arrays (probability distributions)
+    p_dist = np.array([p])
+    q_dist = np.array([q])
+        
+    # Calculate the Jensen-Shannon distance
+    jsd = jensenshannon(p, q)
+    js_distance = np.sqrt(jsd)
+
+    print(f"Jensen-Shannon Divergence: {jsd}")
+    print(f"Jensen-Shannon Distance: {js_distance}")
+        
+
+    # Display the resulting list
+    print(p,q)
+    return(js_distance) 
 
 """
 p = np.array([0.1,0.4,0.0001, 0.3, 0.20009])

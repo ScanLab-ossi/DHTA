@@ -28,7 +28,7 @@ concat_df = pd.DataFrame(columns=columns)
 for i, file in enumerate(file_list):
     # Read the current CSV file
     temp_df = pd.read_csv(file)
-    merged_df = all_df[['word', 'wordavg', 'wordCount','dt']] 
+    merged_df = all_df[['word', 'wordavg', 'wordCount']] 
     merged_df['filename']=i
 
     # Merge with the accumulated DataFrame using an outer join
@@ -77,7 +77,7 @@ for filename  in unique_files:
     #final_df.loc[condition,'final_JSD']=js_distance_general
     # sort top 30 words for signatures
     top_30_df = filtered_df.nlargest(30, 'JSD')
-    selected_columns_df=top_30_df[['filename','word','wordavg','percent_of_total','JSD','wordCount_x','wordCount_y','final_JSD','dt']]
+    selected_columns_df=top_30_df[['filename','word','wordavg','percent_of_total','JSD','wordCount_x','wordCount_y','dt']]
     # Display the selected rows
     print(top_30_df.head(30))
     sig_df = pd.concat([sig_df, top_30_df], axis=0, ignore_index=True)  

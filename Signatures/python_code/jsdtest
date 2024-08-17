@@ -1,0 +1,15 @@
+import numpy as np
+from scipy.spatial.distance import jensenshannon
+
+# Example distributions
+P = np.array([0.1, 0.4, 0.5])
+Q = np.array([0.2, 0.3, 0.5])
+
+# Calculate the Jensen-Shannon divergence
+jsd = jensenshannon(P, Q, base=2)
+
+# Jensen-Shannon distance (the square root of the divergence)
+js_distance = np.sqrt(jsd)
+
+print(f"Jensen-Shannon Divergence: {jsd}")
+print(f"Jensen-Shannon Distance: {js_distance}")
