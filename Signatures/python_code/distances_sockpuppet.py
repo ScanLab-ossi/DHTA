@@ -11,7 +11,7 @@ current_path = os.getcwd()
 # distances Sockpuppet
 
 
-def sockpuppet(summary,graph_title,pdist_type):
+def sockpuppet(summary,graph_title,pdist_type,alias):
     import pandas as pd
     print (summary.head())
     X = summary['word'].unique()
@@ -35,7 +35,7 @@ def sockpuppet(summary,graph_title,pdist_type):
     distance_df = pd.DataFrame(squareform(distance_matrix), index=Y, columns=Y)
 
     # Save results 
-    distance_df.to_csv(current_path+'/Signatures/results_cod/'+pdist_type+'.csv', index=True)  
+    distance_df.to_csv(current_path+'/Signatures/results_'+alias+'/'+pdist_type+'.csv', index=True)  
 
     print(distance_df)
 
@@ -54,7 +54,7 @@ def sockpuppet(summary,graph_title,pdist_type):
     sns.heatmap(distance_df, annot=False, cmap='Greens',  square=True,linewidths=0.5, linecolor='gray',annot_kws={"size": 8} ) 
     plt.title(graph_title)
     # Save the figure to a file
-    plt.savefig(current_path+'/Signatures/results_cod/'+graph_title+'.png', dpi=300, bbox_inches='tight')
+    plt.savefig(current_path+'/Signatures/results_'+alias+'/'+graph_title+'.png', dpi=300, bbox_inches='tight')
     plt.show() 
 
 def sp_altair(summary,graph_title):

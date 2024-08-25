@@ -95,6 +95,7 @@ def calculate_jsd_sig(p, q):
         # Calculate the Jensen-Shannon distance
         js_distance = jensenshannon(p_dist, q_dist)
         
+        
         # Append the result to the list
         result_list.append(js_distance)
 
@@ -118,12 +119,12 @@ def calculate_jsd_sig_distance(p, q):
     plist = p 
     qlist = q  
 
-    # Convert to 2-element arrays (probability distributions)
-    p_dist = np.array([p])
-    q_dist = np.array([q])
+    # Convert to 2-element arrays (probability distributions) 
+    p_dist = np.array([p, 1 - p])
+    q_dist = np.array([q, 1 - q])
         
     # Calculate the Jensen-Shannon distance
-    jsd = jensenshannon(p, q)
+    jsd = jensenshannon(p_dist, q_dist)
     js_distance = np.sqrt(jsd)
 
     print(f"Jensen-Shannon Divergence: {jsd}")
@@ -132,7 +133,8 @@ def calculate_jsd_sig_distance(p, q):
 
     # Display the resulting list
     print(p,q)
-    return(js_distance) 
+    #return(js_distance) 
+    return(jsd) 
 
 """
 p = np.array([0.1,0.4,0.0001, 0.3, 0.20009])
